@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Chem</title>
+    <meta name="description" content="Welcome to our website. We offer a variety of useful and interesting content across different topics. Enjoy a rich and informative browsing experience.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.ar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <!-- Custom Script -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-Sy4T3FZT63M5ac+4e4vG1mf8aKOVbIQ6E+0BJoO+IR+JP4PzS6zMprZX51jItNHRq5c7QW8B9yWHD8MwVGmVYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+            
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="scrollCue.css">
+
+</head>
+
+<body>
+            
+            
+
+        <nav class="navbar bg-white">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo-schem.webp" alt="Logo">
+                    </a>
+            
+                    <!-- Globe icon and menu button aligned next to each other on one line -->
+                    <ul class="navbar-nav d-flex flex-row align-items-center">
+                           <!-- Menu button -->
+                           <li class="nav-item">
+                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                                    <i class="fas fa-bars mr-2 "></i> 
+                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                            </button>
+                      <!-- Globe icon with styled selected language label -->
+                      <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" href="#">
+                          <i class="fas fa-globe ml-2"></i>
+                          <span id="selected-language" class="language-label">English</span>
+                        </a>
+                        <div class="dropdown-content">
+                          <a href="#" onclick="setLanguage('en')">English</a>
+                          <a href="#" onclick="setLanguage('ar')">العربية</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+            
+    
+            
+            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+            <div id="sideMenu" class="side-menu ">
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
+                <div class="container ">
+                    <div class="row navbar-content mt-5">
+                        <!-- Left Side (Menu) -->
+                        <div class="col-md-6 side-menu-left">
+                            <div class="side-menu-content ">
+                                <ul class="menu-list ">
+                                        <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="about.html">About S-Chem <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="teams.html">Teams <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                        <!-- Right Side (Logo and Info) -->
+                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                            <div class="logo-navbar-section">
+                                <img src="assets/logo-schem.webp" alt="Osus Logo" class="osus-logo">
+                                <div class="contact-info">
+                                  <p>
+                                    <a href="/allproject.html" class="nav-link-menu">Projects</a> &nbsp;&nbsp;
+                                    <a href="/contact.html" class="nav-link-menu">Contact Us</a> &nbsp;&nbsp;
+                                    <a href="/PrivacyPolicy.html" class="nav-link-menu">Privacy & Terms</a>
+                                  </p>
+                                  <h4><a href="mailto:Contact@Osusdev.com">Headquarters: Industrial Area,Al Jubail 35722, Saudi Arabia</a></h4>
+                                  <h4><a href="mailto:Contact@Osusdev.com">  Phone: (+966) 13 356 8100</a></h4>
+                                  <h4><a href="mailto:Contact@Osusdev.com">Fax: (+966) 13 358 3680</a></h4>
+                                        <h3>Working hours</h3>
+                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
+                                    </div>
+                                <div class="social-icons mt-4">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                    <i class="fab fa-tiktok"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+            
+
+        <!-- Announcement Modal -->
+        <div id="announcement" class="announcement">
+          <div class="announcement-content">
+            <img src="assets/masterplan.webp" alt="Announcement" />
+            <button id="close-announcement" class="close-btn-announcemnet">X</button>
+          </div>
+        </div>
+
+
+
+            <section class="home-header-slider px-0">
+              <div class="slider-vedio-img mt-5">
+                <!-- Video Slide -->
+                <div class="vedio-img-slider">
+                  <div class="background-video"></div>
+                  <video  autoplay muted loop class="w-100">
+            <source src="assets/-dfca-47a0-bb03-b262236b52db.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+            
+                <!-- Image Slide -->
+                <div class="vedio-img-slider">
+                  <img src="assets/innerproj.webp" alt="Image 1" class="w-100">
+                  <div class="content-header-slider">
+                    <h1>A Legacy of Transformation. Beyond Buildings</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus porro aliquam maiores laborum, veritatis at enim eligendi officiis sapiente atque. Reprehenderit voluptatem molestias debitis, omnis sapiente nulla libero porro iusto!</p>
+                    <a href="#" class="btn-explore mt-2 ">
+                      More About Us  </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+       
+
+
+<!-- 
+      <div class="container">
+        <section class="video-title  ">
+          <h1>A Legacy of Transformation.<br>Beyond Buildings</h1>
+           </div>
+          </div>
+          <div class="video-container">
+            <div class="video-section">
+                <div class="background-image"></div>
+                <video class="background-video" playsinline autoplay muted loop>
+                    <source src="assets/-dfca-47a0-bb03-b262236b52db.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+          </div>
+        </section>
+      
+ -->
+
+<!-- Numbers Section-->
+<section class="counter-section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="12">+0K</div>
+        </div>
+        <div class="description-numbers">Residential Units</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="11">+0K</div>
+        </div>
+        <div class="description-numbers">M2 Plot Area</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="9">+0K</div>
+        </div>
+        <div class="description-numbers">Offices</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="counter-wrapper">
+          <div class="counter" data-target="12">+0K</div>
+        </div>
+        <div class="description-numbers">M2 Built-up Area</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+<!-- Introduction Section-->
+<section class="introduction-section">
+  <div class="container">
+    <div class="row ">
+      <!-- Left Column -->
+      <div class="col-md-6 parallax-text">
+        <h5 class="intro-title" data-aos="fade-up" data-aos-duration="800">Introduction</h5>
+        <h1 class="legacy-title" data-aos="fade-up" data-aos-duration="800"> Saudi Chevron <br>Phillips Company <br>(SCP) </h1>
+      </div>
+      <!-- Right Column -->
+      <div class="col-md-6 business-strategy">
+        <p data-aos="fade-up" data-aos-duration="800">
+          Saudi Chevron Phillips Company (SCP), Jubail Chevron Phillips Company (JCP) and Saudi Polymers Company (SPCo) are collectively known as S-Chem.
+        </p>
+        <a href="#" class="btn-explore mt-4 me-2" data-aos="fade-up" data-aos-duration="800">
+          More About Us  <img src="assets/arrow-down.svg" alt="" class="arrow-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Featured Portfolio --> 
+<div class="container">
+
+  <div class="business-strategy-portfolio text-center my-5">
+    <h2 data-aos="fade-up" data-aos-duration="800">Featured Portfolio</h2>
+    <p data-aos="fade-up" data-aos-duration="800">Our informed business strategy rests upon the pillars of innovation <br> and adaptability.</p>
+  
+    <div class="row portfolio-row flex-container justify-content-center portfolio-slider" data-aos="fade-up" data-aos-duration="900">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio1.webp" alt="Project 1">
+          <div class="overlay">
+            <p class="overlay-text">OD Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio3.webp" alt="Project 2">
+          <div class="overlay">
+            <p class="overlay-text">Land</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio2.webp" alt="Project 3">
+          <div class="overlay">
+            <p class="overlay-text">Commercial Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio4.webp" alt="Project 4">
+          <div class="overlay">
+            <p class="overlay-text">Residential Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mt-5">
+      <a href="/allproject.html" class="see-more-button w-20 d-flex align-items-center justify-content-center" style="width: 240px;">
+        Explore all projects 
+        <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
+      </a>
+    </div>     
+  </div>
+</div>
+
+
+
+<!--Crafting-->
+    <section class="crafting">
+      <div class="crafting-text">
+        <h2 data-aos="fade-up" data-aos-duration="800"> Crafting Distinctive Environments</h2>
+      </div>
+  </section>
+
+ 
+
+  
+<!-- Unlocking -->
+<section class="parallax-container">
+  <div class="unlocking-exceptional">
+    <div class="unlock-body">
+      <div class="text-center mb-5">
+        <h6 class="unlocking-subtitle animated-title" data-aos="fade-up" data-aos-duration="800">S-Chem</h6>
+        <h2 class="unlocking-title animated-title" data-aos="fade-up" data-aos-duration="800">Unlocking Exceptional Value</h2>
+        <h2 class="unlocking-title animated-title" data-aos="fade-up" data-aos-duration="800">Distinctive Business Practices</h2>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- First Card -->
+          <div class="col-md-6">
+            <div class="unlockcard text-white">
+              <div class="unlockcard-body unlockcard-body-top">
+                <div class="unlock-icon-wrapper text-left mb-2">
+                  <div class="unlock-icon d-flex justify-content-left align-items-left">
+                    <img src="assets/card2icon.webp" alt="Icon" class="img-fluid">
+                  </div>
+                </div>
+                <h5 class="card-unlock-title text-left" data-aos="fade-up" data-aos-duration="800">Impressive Portfolio</h5>
+                <p class="card-unlock-text" data-aos="fade-up" data-aos-duration="800">Our diverse portfolio of developments empowers a new generation of leaders, motivating us to explore opportunities for expanding the white land portfolio alongside residential and commercial projects.</p>
+              </div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="vertical-line"></div>
+          </div>
+
+          <!-- Second Card -->
+          <div class="col-md-6 position-relative">
+            <div class="unlockcard text-white">
+              <div class="unlockcard-body pl-4">
+                <div class="unlock-icon-wrapper text-left mb-2">
+                  <div class="unlock-icon d-flex justify-content-left align-items-left">
+                    <img src="assets/card2icon.webp" alt="Icon" class="img-fluid" data-aos="fade-up" data-aos-duration="800">
+                  </div>
+                </div>
+                <h5 class="card-unlock-title text-left" data-aos="fade-up" data-aos-duration="800">Lucrative Investments</h5>
+                <p class="card-unlock-text" data-aos="fade-up" data-aos-duration="800">Our dedication to innovation and excellence drives internal investments in technology, work environment, and talent, enhancing our ability to deliver exceptional value.</p>
+              </div>
+            </div>
+            <div class="vertical-line-left"></div>
+            <div class="horizontal-line"></div>
+          </div>
+
+          <!-- Third Card -->
+          <div class="col-md-6 position-relative">
+            <div class="unlockcard text-white">
+              <div class="unlockcard-body unlockcard-body-down">
+                <div class="unlock-icon-wrapper text-left mb-2">
+                  <div class="unlock-icon d-flex justify-content-left align-items-left">
+                    <img src="assets/card2icon.webp" alt="Icon" class="img-fluid" data-aos="fade-up" data-aos-duration="800">
+                  </div>
+                </div>
+                <h5 class="card-unlock-title text-left" data-aos="fade-up" data-aos-duration="800">Investment Strategies</h5>
+                <p class="card-unlock-text" data-aos="fade-up" data-aos-duration="800">We persistently build sophisticated investment strategies to deliver value to all stakeholders, which optimizes returns.</p>
+              </div>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+
+          <!-- Fourth Card -->
+          <div class="col-md-6 position-relative">
+            <div class="unlockcard text-white">
+              <div class="unlockcard-body pl-3">
+                <div class="unlock-icon-wrapper text-left mb-2">
+                  <div class="unlock-icon d-flex justify-content-left align-items-left">
+                    <img src="assets/card2icon.webp" alt="Icon" class="img-fluid" data-aos="fade-up" data-aos-duration="800">
+                  </div>
+                </div>
+                <h5 class="card-unlock-title text-left" data-aos="fade-up" data-aos-duration="800">Customer Experience</h5>
+                <p class="card-unlock-text" data-aos="fade-up" data-aos-duration="800">Our commitment to excellence extends beyond development, encompassing every touchpoint, ensuring we deliver an exceptional customer journey consistently.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Steps -->
+<section class="steps-section container text-center py-5">
+  <h2 class="steps-title" data-aos="fade-up" data-aos-duration="800">Move in three steps</h2>
+  <div class="row justify-content-center">
+      <!-- Step 1 -->
+      <div class="col-md-4 mb-4 step-item">
+        <div class="step-content">
+            <img src="assets/move1.webp" alt="Contact Us" class="img-fluid mb-3 rotate-image" data-aos="fade-up" data-aos-duration="800">
+            <h5 class="move-title">Contact us</h5>
+            <p class="move-subtitle">Tell us what kind of house you are looking for, and we will provide you with an estimate and a plan to proceed with it.</p>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="col-md-4 mb-4 step-item">
+          <div class="step-content" data-aos="fade-up" data-aos-duration="800">
+              <img src="assets/move2.webp" alt="Meet Our Architects" class="img-fluid mb-3 rotate-image" data-aos="fade-up" data-aos-duration="800">
+              <h5 class="move-title">Meet our architects</h5>
+              <p class="move-subtitle">Let's work out the design in detail together. When it's ready, we'll present you with a final estimate, sign a contract, and start construction.</p>
+          </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="col-md-4 mb-4 step-item">
+          <div class="step-content" data-aos="fade-up" data-aos-duration="800">
+              <img src="assets/move3.webp" alt="Move In" class="img-fluid mb-3 rotate-image" data-aos="fade-up" data-aos-duration="800">
+              <h5 class="move-title">Move in</h5>
+              <p class="move-subtitle">The whole process will take us 99 days and we will make sure it goes smoothly.</p>
+          </div>
+      </div>
+  </div>
+  <a href="#" class="see-more-button d-flex align-items-center justify-content-center" style="width: 240px;">
+    Register Interest
+    <img src="assets/arrow-down.svg" alt="" class="ms-2">
+  </a>
+</section>
+
+
+
+
+<!-- News Section -->
+<section class="news-section">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="news-header" data-aos="fade-up" data-aos-duration="800">
+              <h2>News</h2>
+              <p>Be updated with S-Chem news</p>
+          </div>
+          <div class="col-md-12">
+              <div class="news-slider">
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s1.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s2.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s1.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s2.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s4.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/s1.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>S-Chem Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-md-6">
+        <a href="/index.html" target="_blank">
+          <img src="assets/footer-widget-logo-schem.webp" alt="OSUS Logo" class="footer-logo">
+        </a>
+        <p class="company-description">
+          Saudi Chevron Phillips Company (SCP), Jubail Chevron Phillips Company (JCP) and Saudi Polymers Company (SPCo) are collectively known as S-Chem.
+        </p>
+        <div class="working-hours">
+          <p><strong>Working hours</strong></p>
+          <p><span>Call Centre</span><span>Sat to Thu 9 AM to 10 PM</span></p>
+          <p><span>Sales Centre</span><span>All week days from 3 PM to 11 PM</span></p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-icons-footer mt-4">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-tiktok"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <!-- Quick Links and Contact Us -->
+      <div class="col-md-6">
+        <div class="row">
+          <!-- Quick Links -->
+          <div class="col-sm-6 quick-links">
+            <h6>Quick links</h6>
+            <ul class="list-unstyled">
+              <li><a href="/allproject.html">Projects</a></li>
+              <li><a href="about.html">About Osus</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="/allnews.html">News</a></li>
+              <li><a href="/teams.html">Teams</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Us -->
+          <div class="col-sm-6 quick-links">
+            <h6>Contact Us</h6>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> 
+                <span> Headquarters: Industrial Area, Al Jubail 35722, Saudi Arabia</span>
+              </li>
+              <li>
+                <i class="fas fa-phone me-2"></i> 
+                <span> Phone: (+966) 13 356 8100</span>
+              </li>
+              <li>
+                <i class="fas fa-fax me-2"></i> 
+                <span> Fax: (+966) 13 358 3680</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4 mb-0">
+      <p>Copyrights © All Rights Reserved, S-Chem 2021.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
+<!-- Slick Slider -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- mmenu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.13/mmenu.min.js"></script>
+
+<!-- Nice Select & Wow & Parallax -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/wow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+<!-- GSAP (for loading page) -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+<!-- FancyBox (for image or video popup) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- Bootstrap Bundle with Popper (JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Xk/5uHBm6F59Ecf7DzN93ewP2eRTtM0NFdQUz3xv2d+1V/kd+ufPQyM4o5XzY0/ymuwVp6LMTPhvquKeXilrMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Waypoints & CounterUp (for animation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script src="./assets/js/jquery.counterup.min.js"></script>
+
+<!-- Swiper Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<div class="cursor cursor-large"></div>
+<div class="cursor cursor-h6"></div>
+
+
+
+<script>
+
+
+  // Anouncement
+  window.onload = function () {
+
+  if (!sessionStorage.getItem("hasVisitedHomePage")) {
+    document.getElementById("announcement").style.display = "flex";
+    document
+      .getElementById("close-announcement")
+      .addEventListener("click", function () {
+        document.getElementById("announcement").style.display = "none";
+      });
+    sessionStorage.setItem("hasVisitedHomePage", "true");
+  }
+};
+
+$(document).ready(function () {
+    var direction = $("body").css("direction");
+
+ 
+    var settings = {
+        autoplay: true,
+        autoplaySpeed: 4000, 
+        dots: false,
+        arrows: false,
+        infinite: true,
+        pauseOnHover: false, 
+        pauseOnFocus: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                },
+            },
+        ],
+    };
+
+   
+    if (direction === "rtl") {
+        settings.rtl = true;
+    }
+
+  
+    var $slider = $(".slider-vedio-img").slick(settings);
+
+
+    $slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+       
+        var $nextSlide = $(slick.$slides[nextSlide]);
+
+    
+        if ($nextSlide.find("video").length) {
+            $slider.slick("setOption", "autoplaySpeed", 15000, true); 
+        } else {
+            $slider.slick("setOption", "autoplaySpeed", 4000, true); 
+        }
+    });
+
+  
+    AOS.refresh();
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const newsImages = document.querySelectorAll(".image-wrapper img, .project-card img.project-img");
+
+    newsImages.forEach((img) => {
+      img.addEventListener("mouseenter", () => {
+    const scaleX = 1.3; 
+    const scaleY = 1.2; 
+    img.style.transform = `scale(${scaleX}, ${scaleY})`;
+});
+        img.addEventListener("mouseleave", () => {
+            img.style.transform = "scale(1)";
+        });
+    });
+});
+
+
+AOS.init({
+  once: false, 
+  
+});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+<script src="script.js" defer></script> 
+<!-- Main Script -->
+<script src="js/main.js"></script>
+  
+</body>
+</html>
