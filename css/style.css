@@ -229,7 +229,7 @@ main {
   -o-transition: 0.3s ease-in-out;
 }
 .menu-list li a:hover {
-  color: #c5aa84;
+  color: #2C286D;
   transition: 0.3s ease-in-out;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -297,15 +297,15 @@ background-color: #2C286D;
 
 .contact-info h3 {
   font-size: 20px;
-  margin-top: 45px;
+  margin-top: 30px;
   margin-bottom: 27px;
   font-weight: 700;
 }
 
 .contact-info h4 {
   font-size: 16px;
-  margin-top: 50px;
-  margin-bottom: 55px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-weight: 400;
 }
 .contact-info:hover h4 {
