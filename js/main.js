@@ -133,7 +133,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     arrows: false,
     rtl: isRTL,
@@ -238,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach((counter) => observer.observe(counter));
 });
-
 
 /*
 // Projects Effect
